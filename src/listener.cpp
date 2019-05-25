@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
 	ros::init(argc, argv, "listener");
 	ros::NodeHandle n;
-	ros::Subscriber sub = n.subscribe("cmd_vel",1000,call_back_func);
+	ros::Subscriber sub = n.subscribe("/bebop/cmd_vel",1000,call_back_func);
 	ros::spin();
 	return 0;
 }
